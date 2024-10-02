@@ -88,7 +88,7 @@ Primer .ics datoteke, ki jo uvozis:
 Skripta ohranja vse predavanja, saj so ta vedno za vse skupine.
 Računalniške in seminarske vaje pa bodo filtrirane glede na to, ali pripadajo tvoji skupini.
 
-## Kak lahk zaj importar iCal file v Google cal.?
+## Kak lahk zaj importam iCal file v Google cal.?
 
 tu mas slikovni prikaz...
 ![prikaz](images/08.jpg)
