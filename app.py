@@ -77,11 +77,10 @@ predmet_skupina = {
     "PODATKOVNE BAZE I": "1",
     "RAČUNALNIŠKA OMREŽJA": "3",
     "UPORABNIŠKI VMESNIKI": "4",
-    "DISKRETNA MATEMATIKA": None,  # Vse skupine so za DM
+    "DISKRETNA MATEMATIKA": None,
     "OSNOVE STATISTIKE": "3"
 }
 
-# Pokliči funkcijo s svojo datoteko
 input_file = 'calendar.ics'  # Pot do tvoje .ics datoteke
 output_file = 'filtriran_urnik.ics'  # Ime nove filtrirane .ics datoteke
 
