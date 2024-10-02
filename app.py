@@ -1,0 +1,63 @@
+import re
+
+def filtriraj_ics(input_file, output_file, predmet_skupina):
+    with open(input_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    
+    filtrirane_vrstice = []
+    is_event = False
+    current_event = []
+    current_predmet = None
+
+    for line in lines:
+        if line.startswith("BEGIN:VEVENT"):
+            is_event = True
+            current_event = []
+            current_predmet = None
+        
+        if is_event:
+            current_event.append(line)
+            
+            # Prepozna ime predmeta iz SUMMARY vrstice
+            if line.startswith("SUMMARY:"):
+                current_predmet = line.split("SUMMARY:")[1].strip()
+
+        if line.startswith("END:VEVENT"):
+            is_event = False
+            event_description = ''.join(current_event)
+            
+            if current_predmet:
+                # Preveri, ali gre za predavanje ali vajo
+                if "RIT 2 VS" in event_description:
+                    if "RV" in event_description:
+                        # Preveri številko skupine za specifičen predmet
+                        match = re.search(r'RV (\d+)', event_description)
+                        if match:
+                            skupina = match.group(1)
+                            # Preveri, če predmet obstaja v naši tabeli in skupina ustreza
+                            if current_predmet in predmet_skupina and predmet_skupina[current_predmet] == skupina:
+                                filtrirane_vrstice.extend(current_event)
+                    else:
+                        # Če ni označena z RV (je predavanje), ohrani
+                        filtrirane_vrstice.extend(current_event)
+
+    # Zapiši filtrirane dogodke v novo datoteko
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write("BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:WISE TIMETABLE\n")
+        f.writelines(filtrirane_vrstice)
+        f.write("END:VCALENDAR\n")
+
+# Definiraj predmete in njihove skupine
+predmet_skupina = {
+    "UVOD V PLATFORMNO ODVISEN RAZVOJ APLIKACIJ": "1",
+    "PODATKOVNE BAZE I": "1",
+    "RAČUNALNIŠKA OMREŽJA": "3",
+    "UPORABNIŠKI VMESNIKI": "4",
+    "DISKRETNA MATEMATIKA": None,
+    "OSNOVE STATISTIKE": "3"
+}
+
+input_file = 'calendar.ics'  # Pot do tvoje .ics datoteke
+output_file = 'filtriran_urnik.ics'  # Ime nove filtrirane .ics datoteke
+
+filtriraj_ics(input_file, output_file, predmet_skupina)
