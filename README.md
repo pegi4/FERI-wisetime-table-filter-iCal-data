@@ -7,6 +7,8 @@ Zahteve:
 
 Uporaba:
 
+Prvo si prenesi iCal datoteki iz https://www.wise-tt.com/wtt_um_feri/index.jsp ![prikaz](38.jpg)
+
 Namestitev: Prepričaj se, da imaš nameščen Python na svojem računalniku. Skripta ne potrebuje dodatnih knjižnic.
 
 Priprava predmeta in skupin: Odpri skripto in v del predmet_skupina dodaj predmete, v katerih si vpisan, ter skupine, ki jim pripadaš. Oblika vnosa je naslednja:
@@ -81,7 +83,7 @@ Primer .ics datoteke:
     END:VEVENT
     END:VCALENDAR
 
-Opombe:
+### Opombe:
 
-    Skripta ohranja vse predavanja, saj so ta vedno za vse skupine.
-    Računalniške in seminarske vaje pa bodo filtrirane glede na to, ali pripadajo tvoji skupini.
+Skripta ohranja vse predavanja, saj so ta vedno za vse skupine.
+Računalniške in seminarske vaje pa bodo filtrirane glede na to, ali pripadajo tvoji skupini.
