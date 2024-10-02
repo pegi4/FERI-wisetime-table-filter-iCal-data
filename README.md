@@ -7,7 +7,7 @@ Zahteve:
 
 Uporaba:
 
-Prvo si prenesi iCal datoteki iz https://www.wise-tt.com/wtt_um_feri/index.jsp ![prikaz](38.jpg)
+Prvo si prenesi iCal datoteko iz https://www.wise-tt.com/wtt_um_feri/index.jsp ![prikaz](38.jpg)
 
 Namestitev: Prepričaj se, da imaš nameščen Python na svojem računalniku. Skripta ne potrebuje dodatnih knjižnic.
 
@@ -49,7 +49,7 @@ python filtriraj_urnik.py
 
 Po uspešnem zagonu bo skripta ustvarila novo .ics datoteko, kjer so filtrirani dogodki glede na tvoje predmete in skupine. Poleg tega bo vsakemu dogodku v polju SUMMARY dodana vrsta dogodka (Predavanje, Seminarske vaje, Računalniške vaje).
 
-Primer .ics datoteke:
+Primer .ics datoteke, ki jo uvozis:
 
     BEGIN:VCALENDAR
     VERSION:2.0
