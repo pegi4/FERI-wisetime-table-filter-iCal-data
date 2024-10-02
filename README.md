@@ -7,7 +7,7 @@ Zahteve:
 
 Uporaba:
 
-Prvo si prenesi iCal datoteko iz https://www.wise-tt.com/wtt_um_feri/index.jsp ![prikaz](38.jpg)
+Prvo si prenesi iCal datoteko iz https://www.wise-tt.com/wtt_um_feri/index.jsp ![prikaz](images/38.jpg)
 
 Namestitev: Prepričaj se, da imaš nameščen Python na svojem računalniku. Skripta ne potrebuje dodatnih knjižnic.
 
@@ -87,3 +87,11 @@ Primer .ics datoteke, ki jo uvozis:
 
 Skripta ohranja vse predavanja, saj so ta vedno za vse skupine.
 Računalniške in seminarske vaje pa bodo filtrirane glede na to, ali pripadajo tvoji skupini.
+
+## Kak lahk zaj importar iCal file v Google cal.?
+
+tu mas slikovni prikaz...
+![prikaz](images/08.jpg)
+![prikaz](images/15.jpg)
+![prikaz](images/21.jpg)
+![prikaz](images/26.jpg)
